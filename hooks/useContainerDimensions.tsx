@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from 'react'
 
-function useContainerDimensions(
+export default function useContainerDimensions(
   containerRef: RefObject<HTMLDivElement>
 ): [number, number] {
   const [canvasWidth, setCanvasWidth] = useState(0)
@@ -15,5 +15,3 @@ function useContainerDimensions(
 
   return [canvasWidth, canvasHeight]
 }
-
-export default useContainerDimensions
